@@ -1,0 +1,15 @@
+{{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+<div class="navigation">
+  <div class="prev-posts">
+  {{ if .Paginator.HasPrev }}
+  <a href="{{ .URL }}page/{{ .Paginator.Prev.PageNumber }}" rel="nofollow">&lt; Newer</a>
+  {{ end }}
+  </div>
+
+  <div class="next-posts">
+  {{ if .Paginator.HasNext }}
+  <a href="{{ .URL }}page/{{ .Paginator.Next.PageNumber }}" rel="nofollow">Older &gt;</a>
+  {{ end }}
+  </div>
+</div>
+{{ end }}
