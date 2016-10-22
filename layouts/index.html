@@ -1,11 +1,12 @@
 {{ partial "header.html" . }}
 
 <section role="document">
-  {{range first 10 (where .Paginator.Pages ".Params.notonhomepage" "!=" "true")}}
-    {{ .Render "item" }}
+  {{range where .Data.Pages "Section" "home" }}
+    <article>
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+    </article>
   {{ end }}
-  {{ partial "pagination.html" . }}
-  {{ partial "sidebar.html" . }}
 </section>
 
 {{ partial "footer.html" . }}
