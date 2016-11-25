@@ -243,6 +243,10 @@ article ol {
   list-style-type: decimal;
 }
 
+article li {
+  margin-bottom: 0.5em;
+}
+
 article strong {
   font-weight: bold;
 }
@@ -268,6 +272,28 @@ article hr {
   border-color: #333;
   border-width: 4px;
   margin: 4vmin 0;
+}
+
+article figure {
+  display: block;
+  margin: 1em auto;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15);
+  max-width: 300px;
+}
+
+article figure img {
+  display: block;
+  margin-bottom: 0;
+}
+
+article figcaption {
+  background: #1F1E2F;
+  font-weight: bold;
+  padding: 0.5em 0.25em;
+  font-size: 75%;
+  text-align: center;
+  line-height: 1.5;
+
 }
 
 body > footer {
@@ -298,5 +324,16 @@ body > footer a:visited {
   text-decoration: none;
   color: #2C49FF;
   text-shadow: 0 1px 0 rgba(0, 0, 0, .8);
+}
+
+@media all and (min-width: 550px) {
+  article figure {
+    float: right;
+    margin: 0 0 1em 1em;
+  }
+
+  article hr {
+    clear: right; 
+  }
 }
 
