@@ -21,7 +21,7 @@ font-weight:normal;
 ol,ul {
 list-style:none;
 }
-caption,th {
+caption {
 text-align:left;
 }
 h1,h2,h3,h4,h5,h6 {
@@ -93,7 +93,7 @@ body {
   background: #16171D url(/assets/images/background.png);
   font-family: sans-serif;
   font-size: 16px;
-  color: #FFF;
+  color: #C7C8D4;
   padding: 2vmin;
 }
 
@@ -185,13 +185,23 @@ article h6 {
 }
 
 article h1,
+article h2 {
+  color: #FFF;
+}
+
+article h3,
+article h4 {
+  /*color: #DDDEE5;*/
+}
+
+article h1,
 article h2,
 article h3 {
   margin-bottom: 1rem;
 }
 
 article h1 {
-  font-size: 200%;
+  font-size: 240%;
 }
 
 article h1:first-child a {
@@ -209,19 +219,19 @@ article h2 {
 }
 
 article h3 {
-  font-size: 150%;
-}
-
-article h4 {
-  font-size: 140%;
-}
-
-article h5 {
   font-size: 130%;
 }
 
+article h4 {
+  font-size: 110%;
+}
+
+article h5 {
+  font-size: 105%;
+}
+
 article h6 {
-  font-size: 115%;
+  font-size: 100%;
 }
 
 article p {
@@ -239,6 +249,7 @@ article ul {
   list-style-type: disc;
 }
 
+
 article ol {
   list-style-type: decimal;
 }
@@ -247,12 +258,30 @@ article li {
   margin-bottom: 0.5em;
 }
 
+article li ul {
+  margin-top: 0.5em;
+  border-left: solid 3px #1F1E2F;
+}
+
 article strong {
   font-weight: bold;
+  color: #FFF;
 }
 
 article em {
   font-style: italic;
+}
+
+article sup {
+  vertical-align: super;
+  font-size: smaller;
+  line-height: normal;
+}
+
+article sub {
+  vertical-align: sub;
+  font-size: smaller;
+  line-height: normal;
 }
 
 article footer.meta {
@@ -281,9 +310,14 @@ article figure {
   max-width: 300px;
 }
 
+article figure.enlargable > a {
+  cursor: zoom-in;
+}
+
 article figure img {
   display: block;
   margin-bottom: 0;
+  background: #16171D;
 }
 
 article figcaption {
@@ -293,7 +327,52 @@ article figcaption {
   font-size: 75%;
   text-align: center;
   line-height: 1.5;
+}
 
+article figcaption a {
+  color: #5F75FF;
+}
+
+article figcaption a:visited {
+  color: #9357FF;
+}
+
+article table {
+  border-left: solid 2px #2C49FF;
+  margin: 1em auto;
+}
+
+article table td,
+article table th {
+  padding: 0.25em 0.5em;
+  min-width: 2.5em;
+}
+
+article table th {
+  background: #2C49FF;
+  color: #FFF;
+  padding-top: 0.5em;
+}
+
+article table th:nth-child(even) {
+  background: #2542ff;
+}
+
+article table td {
+  border-right: solid 1px #2b2e39;
+}
+
+article table td:last-child {
+  border-right: none;
+}
+
+article table tr:hover td,
+article table tr:nth-child(even):hover td {
+  background: #191d2d;
+}
+
+article table tr:nth-child(even) td {
+  background: #1a1b22;
 }
 
 body > footer {
@@ -330,10 +409,27 @@ body > footer a:visited {
   article figure {
     float: right;
     margin: 0 0 1em 1em;
+    clear: right;
+  }
+
+  article figure.wide, article figure.full-width {
+    float: none;
+    width: 80%;
+    margin: 1em auto;
+    max-width: 100%;
+  }
+
+  article figure.full-width {
+    width: 100%;
+  }
+
+  article figure.wide img ,
+  article figure.full-width img {
+      margin: 0 auto;
   }
 
   article hr {
-    clear: right; 
+    clear: right;
   }
 }
 
