@@ -125,12 +125,12 @@ body > header a:focus {
 }
 
 a {
-  color: #2C49FF;
+  color: #FFE10D;
   text-decoration: none;
 }
 
 a:visited {
-  color: #7224FF;
+  color: #FF970D;
 }
 
 a:focus, a:hover {
@@ -330,11 +330,11 @@ article figcaption {
 }
 
 article figcaption a {
-  color: #5F75FF;
+  color: #FFCE3B;
 }
 
 article figcaption a:visited {
-  color: #9357FF;
+  color: #FFAB3B;
 }
 
 article table {
@@ -401,7 +401,7 @@ body > footer a,
 body > footer a:visited {
   font-weight: bold;
   text-decoration: none;
-  color: #2C49FF;
+  color: #FFC20D;
   text-shadow: 0 1px 0 rgba(0, 0, 0, .8);
 }
 
